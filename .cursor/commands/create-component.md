@@ -22,6 +22,24 @@ Create a new React component in this repo following project conventions. **Clari
 - Show created or updated files with full content or clear diff snippets.
 - Briefly state where the component lives and how to import it.
 
+### Example (usage → artifacts)
+
+**Invocation** — In Cursor, run this command (e.g. **Create component**) with an explicit prompt such as: *Add `ShapeHintBadge` in `packages/excalidraw/components` with a short label prop; include a colocated test.*
+
+**Artifacts** — `packages/excalidraw/components/ShapeHintBadge.tsx` (and, if requested, `ShapeHintBadge.test.tsx` next to it).
+
+**Resulting component (shape)** — A named export with a props type and strict typing, for example:
+
+```tsx
+type ShapeHintBadgeProps = { label: string };
+
+export function ShapeHintBadge({ label }: ShapeHintBadgeProps) {
+  return <span className="ShapeHintBadge">{label}</span>;
+}
+```
+
+**Path & import** — File: `packages/excalidraw/components/ShapeHintBadge.tsx`. From another module in the same package, use a relative import, e.g. `import { ShapeHintBadge } from "./ShapeHintBadge"` (or the path your package uses for that folder). If the component is re-exported from the library entry, consumers may import from the public `excalidraw` API instead — follow existing re-exports in that package.
+
 ## Follow-up
 
 - If the change materially affects project context, remind about updating the Memory Bank under `docs/memory/` per `AGENTS.md`.
