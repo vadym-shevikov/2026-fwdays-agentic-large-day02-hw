@@ -32,7 +32,7 @@ Triggered by: "update memory bank", "sync docs", "refresh project docs".
    - **Architecture, state flow, or patterns** (e.g. actions/render pipeline boundaries, monorepo boundaries) → `systemPatterns.md` + `decisionLog.md`
    - **Dependencies, build, toolchain, CI** → `techContext.md`
    - **Scope, product goals, user-facing intent** → `projectbrief.md` + `productContext.md`
-   Before writing, **confirm relevance**: grep or read call sites for **public API** imports (`from "excalidraw"`, `from "excalidraw/...`); if the change affects published behavior, skim `CHANGELOG.md` / package changelog (if present) so Memory Bank notes match what consumers would see.
+   Before writing, **confirm relevance**: grep or read call sites for **public API** imports (`from "excalidraw"`, `from "excalidraw/..."`); if the change affects published behavior, skim `CHANGELOG.md` / package changelog (if present) so Memory Bank notes match what consumers would see.
 4. Verify updated content against actual source code (read files, grep, or run commands as needed).
 5. Ensure each updated file stays under **200 lines** — summarize or split pointers to other docs if needed.
 
